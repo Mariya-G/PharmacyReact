@@ -10,7 +10,7 @@
 
 ## Запуск:
 
-> ``npm run start`
+> `npm run start`
 
 ## Инструментарий: React, css, html, js
 
