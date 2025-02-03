@@ -1,0 +1,20 @@
+body {
+  background-color: #ececec;
+  height: 100%;
+}
+.page {
+  display: grid;
+  grid-template-columns: minmax(50px, 300px) 1fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar content"
+    "sidebar footer";
+  font-family: "Inter", sans-serif;
+  font-family: Inter, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
