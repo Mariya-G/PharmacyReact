@@ -4,13 +4,13 @@
 
 > `git clone  git@github.com:Mariya-G/PharmacyReact.git`
 
-## Сборка:
+## Сборка проекта:
 
 > `npm run build`
 
-## Запуск:
+## Запуск приложения в режиме разработки:
 
-> `npm run start`
+> `npm run dev`
 
 ## Инструментарий: React, css, html, js
 
