@@ -4,7 +4,7 @@ import avatar from "../images/photo.png";
 function Cabinet() {
   return (
     <section className="cabinet">
-      <img src={avatar} className="cabinet__photo"/>
+      <img src={avatar} className="cabinet__photo" alt="Аватар пользователя" />
       <p className="cabinet__title">Мария Городилова</p>
       <p className="cabinet__text">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo

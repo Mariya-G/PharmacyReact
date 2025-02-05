@@ -14,33 +14,6 @@
   margin-left: 70px;
 }
 
-.content__bread-crumbs-link {
-  color: #4a72a0;
-  font-size: 14px;
-  font-weight: 400;
-  padding: 0;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
-
-.content__bread-crumbs-link:hover {
-  color: #245791;
-}
-
-.content__bread-crumbs-link::after {
-  content: "/";
-  position: relative;
-  padding: 0 5px;
-}
-
-.content__bread-crumbs-link:last-child {
-  color: #595959;
-}
-
-.content__bread-crumbs-link:last-child::after {
-  content: "";
-}
-
 .content__title {
   color: #525252;
   font-size: 24px;

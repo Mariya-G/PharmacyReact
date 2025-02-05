@@ -6,7 +6,7 @@ function NavBar() {
     const [openMenuIndex, setOpenMenuIndex] = useState(null);
     const toggleMenu = (index) => {
       setOpenMenuIndex(openMenuIndex === index ? null : index);
-    }; // по ум. все пункты меню закрыты
+    };
 
   return (
     <nav className="sidebar__navigation">
