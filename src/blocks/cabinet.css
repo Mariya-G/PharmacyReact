@@ -1,0 +1,78 @@
+.cabinet__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-top: 20px;
+}
+
+.cabinet__form-row {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+.cabinet__input {
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  min-height: 40px;
+  padding: 5px;
+  width: 80%;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+.cabinet__btn-clear {
+  color: red;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.cabinet__btn-clear:hover {
+  border: 1px solid red;
+}
+
+.cabinet__btn-save {
+  background: url(../images/ok.png) no-repeat center center;
+  width: 20px;
+  height: 25px;
+  border: none;
+  background-size: contain;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+}
+
+.cabinet__btn-save:hover {
+  border: 1px solid green;
+  padding: 5px;
+}
+
+.cabinet__title{
+  color: #4a4a4a;
+  font-size: 20px;
+}
+
+.cabinet__text {
+  color: #4a4a4a;
+  font-size: 16px;
+}
+
+.cabinet__photo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.cabinet__label {
+  width: 10%;
+  font-size: 12px;
+  color: #ccc;
+}

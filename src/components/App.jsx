@@ -8,11 +8,14 @@ import Cabinet from "./Cabinet";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
+  const nameUser = '';
+  const textForName = '';
   const [isStreachHeader, setIsStreachHeader] = useState(false); // Для растягивания шапки при скрытии боковой панели
   const [isOpenSidebar, setIsOpenSidebar] = useState(true); // Боковая панель
   const [isStreachContent, setIsStreachContent] = useState(false); // Для растягивания контента при скрытии боковой панели
   const [windowWidth, setWidowWidth] = useState(window.innerWidth); // Ширина экрана
-
+  const [inputName, setInputName] = useState(nameUser);
+  const [inputTextArea, setInputTextArea] = useState(textForName);
   // Отслеживание ширины экрана, ниже 700 боковая панель сворачивается, а свыше 700 по умолчанию открыта
   useEffect(() => {
     const handleResize = () => {
@@ -38,12 +41,25 @@ function App() {
     }
   }, [windowWidth]);
 
-// Изменения состояний шапки, боковй панели и контента
+// Изменения состояний шапки, боковой панели и контента
   const handleWholeScreen = () => {
     setIsOpenSidebar((prevState) => !prevState);
     setIsStreachHeader((prevState) => !prevState);
     setIsStreachContent((prevState) => !prevState);
   };
+ 
+  
+
+useEffect(()=> {
+  const savedName = localStorage.getItem('inputName');
+  const savedText = localStorage.getItem('textArea')
+    if (savedName) {
+    setInputName(savedName);
+  }
+  if (savedText) {
+    setInputTextArea(savedText);
+  }
+}, [setInputName, setInputTextArea]);
 
   return (
     <div className="page">
@@ -54,6 +70,8 @@ function App() {
       />
       <Header 
       isStreachHeader={isStreachHeader}
+      savedName={inputName}
+      setInputName={setInputName}
       />
       <section
         className={`content ${isStreachContent ? "content-streach" : ""}`}
@@ -67,7 +85,14 @@ function App() {
           <Route path="/sub-menu-5" element={<Information />} />
           <Route path="/sub-menu-6" element={<Information />} />
           <Route path="/sub-menu-7" element={<Information />} />
-          <Route path="/cabinet" element={<Cabinet/>}/>
+          <Route path="/cabinet" element={
+            <Cabinet 
+            inputName={inputName} 
+            setInputName={setInputName}
+            setInputTextArea={setInputTextArea}
+            inputTextArea={inputTextArea}
+            />}
+            />
         </Routes>
       </section>
       <Footer />

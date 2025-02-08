@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import avatar from "../images/photo.png";
 function Header(props) {
+  function handleChangeName() {
+    props.setInputName(props.savedName);
+  }
   return (
     <header
       className={`header ${!props.isStreachHeader ? "" : "header-streach"}`}
@@ -16,7 +19,9 @@ function Header(props) {
         />
       </form>
       <div className="header__user-menu">
-        <Link to="cabinet" className="header__user-menu-link">Мария Городилова</Link>
+        <Link to="cabinet" className="header__user-menu-link" onChange={handleChangeName}>
+          {props.savedName}
+        </Link>
         <Link to="cabinet" className="header__user-menu-link-avatar">
           <img
             src={avatar}
@@ -24,9 +29,7 @@ function Header(props) {
             alt="Аватар пользователя"
           />
         </Link>
-        <Link className="header__user-menu-logout">
-          Выйти
-        </Link>
+        <Link className="header__user-menu-logout">Выйти</Link>
       </div>
     </header>
   );
