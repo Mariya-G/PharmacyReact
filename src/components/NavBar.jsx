@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
 import menuItems from "../utils/utils";
 
-function NavBar() {
+function NavBar(props) {
     const [openMenuIndex, setOpenMenuIndex] = useState(null);
     const toggleMenu = (index) => {
       setOpenMenuIndex(openMenuIndex === index ? null : index);

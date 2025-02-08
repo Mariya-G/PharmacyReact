@@ -34,9 +34,9 @@ function Cabinet(props) {
     <section className="cabinet">
       <img src={avatar} className="cabinet__photo" alt="Аватар пользователя" />
       <form className="cabinet__form" onSubmit={handleSubmit}>
-      <label className="cabinet__label" name="name">
-            Ваше ФИО
-          </label>
+        <label className="cabinet__label" name="name">
+          Ваше ФИО
+        </label>
         <div className="cabinet__form-row">
           <input
             value={props.inputName}
@@ -44,6 +44,7 @@ function Cabinet(props) {
             name="name"
             type="text"
             className="cabinet__input"
+            placeholder="Иванов Иван Иванович"
           />
           <button
             onClick={hadleClearName}
@@ -58,17 +59,16 @@ function Cabinet(props) {
           ></button>
         </div>
         <label className="cabinet__label" name="name">
-            О себе
-          </label>
+          О себе
+        </label>
         <div className="cabinet__form-row">
-          
           <input
             value={props.inputTextArea}
             onChange={handleChangeText}
             type="text"
             name="name"
             className="cabinet__input cabinet__input-text"
-            placeholder="Ваше ФИО"
+            placeholder="Расскажите о себе.."
           />
           <button
             onClick={hadleClearText}

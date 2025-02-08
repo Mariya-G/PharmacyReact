@@ -14,8 +14,9 @@ function App() {
   const [isOpenSidebar, setIsOpenSidebar] = useState(true); // Боковая панель
   const [isStreachContent, setIsStreachContent] = useState(false); // Для растягивания контента при скрытии боковой панели
   const [windowWidth, setWidowWidth] = useState(window.innerWidth); // Ширина экрана
-  const [inputName, setInputName] = useState(nameUser);
-  const [inputTextArea, setInputTextArea] = useState(textForName);
+  const [inputName, setInputName] = useState(nameUser); // Имя в ЛК
+  const [inputTextArea, setInputTextArea] = useState(textForName); // Текст в ЛК
+
   // Отслеживание ширины экрана, ниже 700 боковая панель сворачивается, а свыше 700 по умолчанию открыта
   useEffect(() => {
     const handleResize = () => {
@@ -49,7 +50,7 @@ function App() {
   };
  
   
-
+// редактирование информации в ЛК
 useEffect(()=> {
   const savedName = localStorage.getItem('inputName');
   const savedText = localStorage.getItem('textArea')
@@ -60,6 +61,7 @@ useEffect(()=> {
     setInputTextArea(savedText);
   }
 }, [setInputName, setInputTextArea]);
+
 
   return (
     <div className="page">
